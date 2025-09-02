@@ -1,0 +1,70 @@
+/* Header degradado rojo (Angular) */
+.bg-red-gradient{
+    background: linear-gradient(90deg, #dd0031 0%, #ff4d6d 100%);
+  }
+  
+
+  /* Área visible por slide (sin fondo aquí) */
+  .slide{
+    height: 700px;
+    padding: 23px;
+  }
+  
+  /* Fondo claro y redondeo SOLO una vez, en el contenedor interno */
+  .carousel-inner{
+    background: #1b2d3f;   /* capa clara única */
+    border-radius: 0rem;
+    overflow: hidden;       /* respeta el borde redondeado */
+    box-shadow: 0 6px 14px rgba(0,0,0,.06);
+  }
+  
+  /* Logos */
+  .logo{
+    max-height: 450px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,.2));
+  }
+  
+  /* Indicadores compactos y visibles */  
+  .carousel-indicators [data-bs-target]{
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%;
+  }
+  .carousel-indicators .active{
+    background-color: #dd0031;
+  }
+  
+  /* Controles visibles sobre fondo claro */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon{
+    filter: invert(1) grayscale(1);
+  }
+  
+ /* Sube el caption tipo chip para no chocar con los indicadores */
+.caption-chip{
+  background: rgba(33,37,41,.65);
+  padding: .35rem .6rem;
+  border-radius: .5rem;
+  display: inline-block;
+  bottom: 5rem; 
+}
+
+/* Baja un poco los indicadores dentro del carrusel */
+.carousel-indicators{
+  bottom: 0rem;      
+}
+
+/* En móvil, ajusta menos para no comer espacio */
+@media (max-width: 768px){
+  .caption-chip{ bottom: 2.5rem; }
+}
+
+  
+  /* Responsive */
+  @media (max-width: 768px){
+    .slide{ height: 280px; }
+    .logo{ max-height: 170px; }
+  }
+  

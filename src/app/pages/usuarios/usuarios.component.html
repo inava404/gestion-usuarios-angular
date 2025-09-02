@@ -1,102 +1,59 @@
-<!-- Hero / Encabezado estilo Angular -->
-<section class="bg-primary text-white py-4 shadow-sm">
-    <div class="container d-flex align-items-center gap-3">
-      <i class="bi bi-rocket-takeoff-fill fs-3"></i>
-      <div>
-        <h1 class="h3 mb-0">Usuarios</h1>
-        <small class="opacity-75">Lista proveniente de JSONPlaceholder</small>
-      </div>
+<section class="text-white py-2 shadow-sm" style="background-color: #eb2651;">
+    <div class="container d-flex align-items-center gap-2">
+        <i class="bi bi-rocket-takeoff-fill fs-3"></i>
+        <div>
+            <h1 class="h3 mb0 ">Usuarios</h1>
+            <small class="opacity-75">Lista proveniente de JSONPlaceholder</small>
+        </div>
     </div>
-  </section>
-  
-  <div class="container my-4">
-  
+</section>
+
+<div class="container my-4">
     <!-- Tarjeta principal -->
     <div class="card shadow-sm border-0">
-      <div class="card-header bg-white d-flex align-items-center gap-2">
-        <i class="bi bi-people-fill text-primary"></i>
-        <span class="fw-semibold">Directorio</span>
-        <span class="badge bg-light text-primary ms-auto">{{ usuarios?.length || 0 }} usuarios</span>
-      </div>
-  
-      <div class="card-body">
-  
+        <div class="card-header bg-white d-flex align-items-center gap-2">
+            <i class="bi bi-people-fill text-primary"></i>
+            <span class="fw-semibold">Directorio</span>
+            <span class="badge bg-light text-primary ms-auto">{{ usuarios?.length || 0 }} usuarios</span>
+        </div>
+        <div class="card-body">
         <!-- Estado de carga -->
         <div *ngIf="cargando" class="text-center py-5">
-          <div class="d-inline-flex align-items-center gap-3">
-            <div class="spinner-border" role="status" aria-hidden="true"></div>
-            <span class="lead">Cargando usuarios…</span>
-          </div>
-  
-          <!-- Placeholders para simular filas -->
-          <div class="mt-4">
-            <div class="placeholder-glow mb-2" *ngFor="let _ of [1,2,3,4,5]">
-              <span class="placeholder col-3"></span>
-              <span class="placeholder col-5 ms-2"></span>
+            <div class="d-inline-flex align-items-center gap-3">
+                <div class="spinner-border" role="status" aria-hidden="true"></div>
+                <span class="lead">Cargando usuarios…</span>
             </div>
-          </div>
+
+            <!-- Placeholders para simular filas -->
+            <div class="mt-4">
+                <div class="placeholder-glow mb-2" *ngFor="let _ of [1,2,3,4,5]">
+                    <span class="placeholder col-3"></span>
+                    <span class="placeholder col-5 ms-2"></span>
+                </div>
+            </div>
         </div>
-  
+
         <!-- Lista cuando ya cargó -->
         <ul *ngIf="!cargando" class="list-group list-group-flush">
-          <li class="list-group-item d-flex align-items-center justify-content-between" *ngFor="let u of usuarios">
+            <li class="list-group-item d-flex align-items-center justify-content-between" *ngFor="let u of usuarios">
             <div class="d-flex align-items-center gap-3">
-              <div class="avatar bg-primary text-white fw-bold">{{ u.name?.[0] || '?' }}</div>
-              <div>
-                <div class="fw-semibold">{{ u.name }}</div>
-                <div class="text-muted small">
-                  <i class="bi bi-envelope me-1"></i>{{ u.email }}
+                <div class="avatar bg-primary text-white fw-bold">{{ u.name?.[0] || '?' }}</div>
+                <div>
+                    <div class="fw-semibold">{{ u.name }}</div>
+                    <div class="text-muted small">
+                        <i class="bi bi-envelope me-1"></i>{{ u.email }}
+                    </div>
+                    <div class="text-muted small" *ngIf="u.phone">
+                        <i class="bi bi-telephone me-1"></i>{{ u.phone }}
+                    </div>
                 </div>
-                <div class="text-muted small" *ngIf="u.phone">
-                  <i class="bi bi-telephone me-1"></i>{{ u.phone }}
-                </div>
-              </div>
             </div>
             <span class="badge rounded-pill text-bg-light">
-              <i class="bi bi-person-badge me-1"></i>{{ u.username }}
+                <i class="bi bi-person-badge me-1"></i>{{ u.username }}
             </span>
-          </li>
+            </li>
         </ul>
-  
-      </div>
+        </div>
     </div>
-  
-    <!-- Tarjetas de “recursos” al estilo landing de Angular (opcional) -->
-    <div class="row g-3 mt-4">
-      <div class="col-12 col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-book text-primary"></i>
-              <span class="fw-semibold">Documentación</span>
-            </div>
-            <p class="text-muted small mb-0">Consulta la API que consumimos y ejemplos de uso.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-gear text-primary"></i>
-              <span class="fw-semibold">Buenas prácticas</span>
-            </div>
-            <p class="text-muted small mb-0">Observables tipados, componentes simples y estilos consistentes.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-layout-text-window-reverse text-primary"></i>
-              <span class="fw-semibold">UI limpia</span>
-            </div>
-            <p class="text-muted small mb-0">Tarjetas, badges y sombras suaves como en la página de Angular.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  </div>
+</div>
   

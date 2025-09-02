@@ -1,0 +1,12 @@
+.hero-home {
+    min-height: 70vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ),
+      url('https://angular.io/assets/images/logos/angular/angular.png'); /* 👈 puedes cambiar por otra imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  

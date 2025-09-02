@@ -1,1 +1,109 @@
-<p>documentacion works!</p>
+<!-- Encabezado -->
+<section class="bg-red-gradient text-white py-4 shadow-sm">
+  <div class="container d-flex align-items-center gap-3">
+    <i class="bi bi-book-half fs-3"></i>
+    <div>
+      <h1 class="h3 mb-0">Documentación</h1>
+      <small class="opacity-75">Recursos y tecnologías usadas en el proyecto</small>
+    </div>
+
+    <a class="btn btn-light ms-auto"
+       href="https://ionicframework.com/docs"
+       target="_blank" rel="noopener">
+      <i class="bi bi-box-arrow-up-right me-1"></i> Ver docs de Ionic
+    </a>
+  </div>
+</section>
+
+<div class="container my-4">
+  <div class="card shadow-sm border-0">
+    <div class="card-header bg-white d-flex align-items-center gap-2">
+      <i class="bi bi-images text-primary"></i>
+      <span class="fw-semibold">Tecnologías</span>
+    </div>
+
+    <!-- 👇 card-body AHORA dentro de la card -->
+    <div class="card-body">
+      <div id="techCarousel"
+           class="carousel slide carousel-fade mx-auto"
+           data-bs-ride="carousel"
+           data-bs-interval="3000"
+           data-bs-pause="hover"
+           data-bs-touch="true"
+           data-bs-wrap="true">
+
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="0" class="active" aria-label="Node.js"></button>
+          <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="1" aria-label="TypeScript"></button>
+          <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="2" aria-label="Angular"></button>
+          <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="3" aria-label="Ionic"></button>
+          <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="4" aria-label="NPM"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner rounded-3 shadow-sm">
+          <div class="carousel-item active">
+            <div class="slide d-flex align-items-center justify-content-center">
+              <img class="logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            </div>
+            <div class="carousel-caption  caption-chip">
+              <h5 class="fw-semibold m-0">Node.js</h5>
+              <p class="small m-0">Entorno de ejecución para JavaScript en servidor.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="slide d-flex align-items-center justify-content-center">
+              <img class="logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+            </div>
+            <div class="carousel-caption d-none d-md-block caption-chip">
+              <h5 class="fw-semibold m-0">TypeScript</h5>
+              <p class="small m-0">Superset tipado de JavaScript.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="slide d-flex align-items-center justify-content-center">
+              <img class="logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ionic/ionic-original.svg" alt="Ionic">
+            </div>
+            <div class="carousel-caption d-none d-md-block caption-chip">
+              <h5 class="fw-semibold m-0">Ionic</h5>
+              <p class="small m-0">UI Toolkit multiplataforma.</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="slide d-flex align-items-center justify-content-center">
+              <img class="logo" src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular">
+            </div>
+            <div class="carousel-caption d-none d-md-block caption-chip">
+              <h5 class="fw-semibold m-0">Angular</h5>
+              <p class="small m-0">Framework para aplicaciones web.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="slide d-flex align-items-center justify-content-center">
+              <img class="logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="NPM">
+            </div>
+            <div class="carousel-caption d-none d-md-block caption-chip">
+              <h5 class="fw-semibold m-0">NPM</h5>
+              <p class="small m-0">Gestor de paquetes JS.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div><!-- /card-body -->
+  </div>
+</div>
