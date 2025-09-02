@@ -1,0 +1,17 @@
+/* Avatar circular con inicial, estilo simple y limpio */
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  /* Ajuste de placeholders para que se vean “skeleton” */
+  .placeholder {
+    display: inline-block;
+    height: 0.9rem;
+    border-radius: 0.25rem;
+  }
+  

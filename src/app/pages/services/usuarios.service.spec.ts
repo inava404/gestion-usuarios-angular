@@ -1,16 +1,21 @@
-import { TestBed } from '@angular/core/testing';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-import { UsuariosService } from './usuarios.service';
+export interface Usuario {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  username: string;
+}
+@Injectable({ providedIn: 'root' })
+export class UsuariosService {
+  private apiUrl = 'https://jsonplaceholder.typicode.com/users';
+  constructor(private http: HttpClient) {}
+  getUsuarios(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.apiUrl);
+  }
+}
 
-describe('UsuariosService', () => {
-  let service: UsuariosService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(UsuariosService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
