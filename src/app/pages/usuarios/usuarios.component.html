@@ -14,7 +14,7 @@
         <div class="card-header bg-white d-flex align-items-center gap-2">
             <i class="bi bi-people-fill text-primary"></i>
             <span class="fw-semibold">Directorio</span>
-            <span class="badge bg-light text-primary ms-auto">{{ usuarios?.length || 0 }} usuarios</span>
+            <span class="badge bg-light text-primary ms-auto">{{ usuarios.length || 0 }} usuarios</span>
         </div>
         <div class="card-body">
         <!-- Estado de carga -->
@@ -33,27 +33,26 @@
             </div>
         </div>
 
-        <!-- Lista cuando ya cargó -->
-        <ul *ngIf="!cargando" class="list-group list-group-flush">
-            <li class="list-group-item d-flex align-items-center justify-content-between" *ngFor="let u of usuarios">
-            <div class="d-flex align-items-center gap-3">
-                <div class="avatar bg-primary text-white fw-bold">{{ u.name?.[0] || '?' }}</div>
-                <div>
-                    <div class="fw-semibold">{{ u.name }}</div>
-                    <div class="text-muted small">
-                        <i class="bi bi-envelope me-1"></i>{{ u.email }}
+            <!-- Lista cuando ya cargó -->
+            <ul *ngIf="!cargando" class="list-group list-group-flush">
+                <li class="list-group-item d-flex align-items-center justify-content-between" *ngFor="let u of usuarios">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar bg-primary text-white fw-bold">{{ u.name[0] || '?' }}</div>
+                            <div>
+                                <div class="fw-semibold">{{ u.name }}</div>
+                                <div class="text-muted small">
+                                    <i class="bi bi-envelope me-1"></i>{{ u.email }}
+                                </div>
+                                <div class="text-muted small" *ngIf="u.phone">
+                                    <i class="bi bi-telephone me-1"></i>{{ u.phone }}
+                                </div>
+                            </div>
                     </div>
-                    <div class="text-muted small" *ngIf="u.phone">
-                        <i class="bi bi-telephone me-1"></i>{{ u.phone }}
-                    </div>
-                </div>
-            </div>
-            <span class="badge rounded-pill text-bg-light">
-                <i class="bi bi-person-badge me-1"></i>{{ u.username }}
-            </span>
-            </li>
-        </ul>
+                    <span class="badge rounded-pill text-bg-light">
+                        <i class="bi bi-person-badge me-1"></i>{{ u.username }}
+                    </span>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
-  
