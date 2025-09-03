@@ -1,1 +1,43 @@
-<p>perfil works!</p>
+<section class="text-white py-2 shadow-sm" style="background-color: #eb2651;">
+    <div class="container d-flex align-items-center gap-3">
+      <i class="bi bi-person-badge fs-3"></i>
+      <div>
+        <h1 class="h3 mb-0">Perfil</h1>
+        <small class="opacity-75">Información personal del usuario</small>
+      </div>
+    </div>
+  </section>
+  
+  <div class="container my-5">
+    <div class="card shadow-lg border-0 mx-auto profile-card">
+      <div class="card-body text-center">
+        <!-- Avatar -->
+        <div class="avatar bg-primary text-white mx-auto mb-3">
+          <i class="bi bi-person-fill fs-1"></i>
+        </div>
+        <h4 class="card-title fw-bold mb-3">{{ usuario.nombre }}</h4>
+  
+        <!-- Datos -->
+        <ul class="list-group list-group-flush text-start">
+          <li class="list-group-item">
+            <i class="bi bi-envelope me-2 text-primary"></i> 
+            <strong>Email:</strong> {{ usuario.email }}
+          </li>
+          <li class="list-group-item">
+            <i class="bi bi-telephone me-2 text-success"></i>
+            <strong>Teléfono:</strong> {{ usuario.telefono }}
+          </li>
+          <li class="list-group-item">
+            <i class="bi bi-geo-alt me-2 text-danger"></i>
+            <strong>Dirección:</strong> {{ usuario.direccion }}
+          </li>
+          <li class="list-group-item">
+            <i class="bi bi-calendar-event me-2 text-warning"></i>
+            <strong>Fecha de Nacimiento:</strong> 
+            {{ usuario.fechaNacimiento | date:'longDate' }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

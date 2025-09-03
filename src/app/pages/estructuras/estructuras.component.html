@@ -1,1 +1,94 @@
-<p>estructuras works!</p>
+<section class="bg-red-gradient text-white py-4 shadow-sm">
+    <div class="container d-flex align-items-center gap-3">
+    <i class="bi bi-diagram-3 fs-3"></i>
+    <div>
+    <h1 class="h3 mb-0">Estructuras de Control en Angular</h1>
+    <small class="opacity-75">Ejemplos prácticos de *ngIf, *ngFor y [ngSwitch]</small>
+    </div>
+</div>
+</section>
+
+<div class="container my-5">
+<!-- Ejemplo ngIf -->
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-light fw-semibold">
+    Ejemplo de <code>*ngIf</code>
+    </div>
+    <div class="card-body text-center">
+    <button class="btn btn-primary mb-3" (click)="mostrarMensaje = !mostrarMensaje">
+        {{ mostrarMensaje ? 'Ocultar' : 'Mostrar' }} mensaje
+    </button>
+
+    <div *ngIf="mostrarMensaje" class="alert alert-success">
+        ¡Hola! Soy un mensaje controlado con <code>*ngIf</code>.
+    </div>
+    <!-- Descripción -->
+    <p class="text-muted small mt-3">
+        <code>*ngIf</code> permite mostrar u ocultar un elemento en la plantilla 
+        dependiendo de si la condición es verdadera o falsa.
+    </p>
+    </div>
+</div>
+
+<!-- Ejemplo ngFor -->
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-light fw-semibold">
+    Ejemplo de <code>*ngFor</code>
+    </div>
+    <div class="card-body">
+    <p>Lista de tecnologías:</p>
+    <ul class="list-group">
+        <li *ngFor="let tech of tecnologias; let i = index"
+            class="list-group-item d-flex justify-content-between align-items-center">
+        {{ i + 1 }}. {{ tech }}
+        <span class="badge bg-primary rounded-pill">#{{ i }}</span>
+        </li>
+    </ul>
+    <!-- Descripción -->
+    <p class="text-muted small mt-3">
+        <code>*ngFor</code> sirve para recorrer arreglos o listas, generando un elemento del DOM 
+        por cada item de la colección.
+    </p>
+    </div>
+</div>
+
+<!-- Ejemplo ngSwitch -->
+<div class="card shadow-sm mb-4">
+    <div class="card-header bg-light fw-semibold">
+    Ejemplo de <code>[ngSwitch]</code>
+    </div>
+    <div class="card-body text-center">
+    <p>Selecciona una opción:</p>
+    <div class="btn-group mb-3">
+        <button class="btn btn-outline-danger" (click)="opcion = 'angular'">Angular</button>
+        <button class="btn btn-outline-primary" (click)="opcion = 'typescript'">TypeScript</button>
+        <button class="btn btn-outline-success" (click)="opcion = 'node'">NodeJS</button>
+        <button class="btn btn-outline-info" (click)="opcion = 'ionic'">Ionic</button>
+    </div>
+
+    <div [ngSwitch]="opcion" class="mt-3">
+        <div *ngSwitchCase="'angular'" class="alert alert-danger">
+        Angular es un framework para construir aplicaciones web.
+        </div>
+        <div *ngSwitchCase="'typescript'" class="alert alert-primary">
+        TypeScript es un superset tipado de JavaScript.
+        </div>
+        <div *ngSwitchCase="'node'" class="alert alert-success">
+        NodeJS permite ejecutar JavaScript en el servidor.
+        </div>
+        <div *ngSwitchCase="'ionic'" class="alert alert-info">
+        Ionic es un toolkit para apps móviles y web.
+        </div>
+        <div *ngSwitchDefault class="alert alert-secondary">
+        Selecciona una opción para ver la descripción.
+        </div>
+    </div>
+    <!-- Descripción -->
+    <p class="text-muted small mt-3">
+        <code>[ngSwitch]</code> evalúa una expresión y, según su valor, muestra el 
+        bloque que coincide (<code>*ngSwitchCase</code>) o uno por defecto (<code>*ngSwitchDefault</code>).
+    </p>
+    </div>
+</div>
+</div>
+  
