@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="bg-red-gradient text-white py-4 shadow-sm">
+    <section class="bg-red-gradient text-white py-2 shadow-sm">
         <div class="container d-flex align-items-center gap-3">
             <i class="bi bi-diagram-3 fs-3"></i>
             <div>
@@ -20,7 +20,7 @@
         <!-- Ejemplo ngIf -->
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-light fw-semibold">
-                Ejemplo de <code>*ngIf</code>
+                Ejemplo de <code class="code-green">*ngIf</code>
             </div>
             <div class="card-body text-center">
                 <button class="btn btn-primary mb-3" (click)="mostrarMensaje = !mostrarMensaje">
@@ -28,11 +28,11 @@
                 </button>
     
                 <div *ngIf="mostrarMensaje" class="alert alert-success">
-                    ¡Hola! Soy un mensaje controlado con <code>*ngIf</code>.
+                    ¡Hola! Soy un mensaje controlado con <code class="code-green">*ngIf</code>.
                 </div>
                 <!-- Descripción -->
                 <p class="text-muted small mt-3">
-                    <code>*ngIf</code> permite mostrar u ocultar un elemento en la plantilla 
+                    <code class="code-green">*ngIf</code> permite mostrar u ocultar un elemento en la plantilla 
                     dependiendo de si la condición es verdadera o falsa.
                 </p>
             </div>
@@ -41,7 +41,7 @@
         <!-- Ejemplo ngFor -->
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-light fw-semibold">
-                Ejemplo de <code>*ngFor</code>
+                Ejemplo de <code class="code-green">*ngFor</code>
             </div>
             <div class="card-body">
             <p>Lista de tecnologías:</p>
@@ -54,7 +54,7 @@
             </ul>
             <!-- Descripción -->
             <p class="text-muted small mt-3">
-                <code>*ngFor</code> sirve para recorrer arreglos o listas, generando un elemento del DOM 
+                <code class="code-green">*ngFor</code> sirve para recorrer arreglos o listas, generando un elemento del DOM 
                 por cada item de la colección.
             </p>
             </div>
@@ -63,7 +63,7 @@
         <!-- Ejemplo ngSwitch -->
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-light fw-semibold">
-                Ejemplo de <code>[ngSwitch]</code>
+                Ejemplo de <code class="code-green">[ngSwitch]</code>
             </div>
             <div class="card-body text-center">
                 <p>Selecciona una opción:</p>
@@ -93,8 +93,8 @@
                 </div>
                 <!-- Descripción -->
                 <p class="text-muted small mt-3">
-                    <code>[ngSwitch]</code> evalúa una expresión y, según su valor, muestra el 
-                    bloque que coincide (<code>*ngSwitchCase</code>) o uno por defecto (<code>*ngSwitchDefault</code>).
+                    <code class="code-green">[ngSwitch]</code> evalúa una expresión y, según su valor, muestra el 
+                    bloque que coincide (<code class="code-green">*ngSwitchCase</code>) o uno por defecto (<code class="code-green">*ngSwitchDefault</code>).
                 </p>
             </div>
         </div>

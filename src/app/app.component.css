@@ -1,0 +1,15 @@
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background: linear-gradient(90deg, #2c7f91 0%, #58d7e6 100%) !important;
+}
+
+.nav-link {
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+    color: rgba(0, 0, 0, 0.57);
+}
+
+.nav-link:hover {
+  color: rgb(255, 227, 0);
+}
+

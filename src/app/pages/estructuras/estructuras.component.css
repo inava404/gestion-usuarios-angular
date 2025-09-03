@@ -1,4 +1,7 @@
 .bg-red-gradient {
-    background: linear-gradient(90deg, #dd0031 0%, #ff4d6d 100%);
+    background: linear-gradient(90deg, #1f6a4a 0%, #449b5e 100%);
   }
-  
+
+.code-green { 
+  color: #3a8b1d;
+}

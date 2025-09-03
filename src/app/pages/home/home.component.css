@@ -4,9 +4,12 @@
         rgba(0, 0, 0, 0.6), 
         rgba(0, 0, 0, 0.6)
       ),
-      url('https://angular.io/assets/images/logos/angular/angular.png'); /* 👈 puedes cambiar por otra imagen */
+      url('../../../assets/imgs/bg-home.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
   
+.code-orange { 
+    color: #14571a; 
+}

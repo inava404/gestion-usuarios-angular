@@ -1,8 +1,7 @@
 /* Header degradado rojo (Angular) */
 .bg-red-gradient{
-    background: linear-gradient(90deg, #dd0031 0%, #ff4d6d 100%);
+    background: linear-gradient(90deg, #80001d 0%, #a43a4e 100%);
   }
-  
 
   /* Área visible por slide (sin fondo aquí) */
   .slide{
@@ -24,6 +23,7 @@
     width: auto;
     object-fit: contain;
     filter: drop-shadow(0 6px 14px rgba(0,0,0,.2));
+    margin-bottom: 50px;
   }
   
   /* Indicadores compactos y visibles */  
